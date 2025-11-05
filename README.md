@@ -42,7 +42,7 @@ This project demonstrates DOM manipulation, form validation, and data persistenc
 
 | Form View | Card View |
 |------------|------------|
-| ![Form Screenshot](./assets/form-view.png) | ![Card Screenshot](./assets/card-view.png) |
+| ![Form Screenshot](./assets/form-view.png) | ![Card Screenshot]((https://github.com/arshan0782/CardStack-useJavaScript/blob/d2a3398e1aa63609e773efeab847528b0488f5c6/Screenshot%202025-11-05%20140740.png)) |
 
 *(Replace these image paths with your actual screenshots.)*
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="form-container">
+        <h2>Add New Card</h2>
+        <form id="cardForm">
+          <label for="imageUrl">Image URL:</label>
+          <input
+            required
+            type="text"
+            id="imageUrl"
+            name="imageUrl"
+            placeholder="Enter image URL"
+          />
+
+          <!-- Name -->
+          <label for="name">Name:</label>
+          <input
+            required
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter name"
+          />
+
+          <!-- Home Town -->
+
+          <label for="hometown">Home Town:</label>
+          <input
+            required
+            type="text"
+            id="hometown"
+            name="hometown"
+            placeholder="Enter hometown"
+          />
+
+          <!-- Purpose -->
+          <label for="purpose">Purpose:</label>
+          <input
+            required
+            type="text"
+            id="purpose"
+            name="purpose"
+            placeholder="Enter purpose"
+          />
+
+          <label>Category:</label>
+          <label class="checkbox-group">
+            <input required type="radio" name="category" value="Emergency" />
+            <span> Emergency</span>
+          </label>
+          <label class="checkbox-group">
+            <input type="radio" name="category" value="Personal" />
+            <span> Personal</span>
+          </label>
+          <label class="checkbox-group">
+            <input type="radio" name="category" value="Important" />
+            <span> Important</span> </label
+          >
+          <label class="checkbox-group">
+            <input type="radio" name="category" value="Shopping" />
+            <span> Shopping</span>
+          </label>
+
+          
+          <div class="form-buttons">
+            <button type="button" id="closeFormBtn">Close</button>
+            <button type="submit" id="addCardBtn">Add Card</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="cards-container" id="cardsContainer">
+        <div class="left-buttons">
+          <button id="add-card"><i class="ri-add-line"></i></button>
+          <button id="upBtn"><i class="ri-arrow-up-line"></i></button>
+          <button id="downBtn"><i class="ri-arrow-down-line"></i></button>
+        </div>
+
+        <div class="card-stack">
+       
+        </div>
+
+        <div class="right-colors">
+          <span class="black"></span>
+          <span class="purple"></span>
+          <span class="orange"></span>
+          <span class="green"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

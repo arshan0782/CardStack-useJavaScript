@@ -1,0 +1,284 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  background: #f4f4f4;
+  height: 100%;
+  width: 100%;
+}
+
+/* ----------------- MAIN LAYOUT ----------------- */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 40px;
+  position: relative;
+}
+
+/* ----------------- FORM CONTAINER ----------------- */
+.form-container {
+  display: none;
+  width: 450px;
+  padding: 30px 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
+
+.form-container h2 {
+  text-align: center;
+  color: #00abf0;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+
+.form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-container input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-container input[type="text"]:focus {
+  border-color: #00abf0;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkbox-group input[type="radio"] {
+  cursor: pointer;
+}
+
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+  
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 25px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+#addCardBtn {
+  background: #00abf0;
+  color: white;
+
+}
+
+#addCardBtn:hover {
+  background: #0088c1;
+}
+
+#closeFormBtn {
+  background: #f44336;
+  color: white;
+  text-transform: capitalize;
+}
+
+#closeFormBtn:hover {
+  background: #c12b1f;
+}
+
+/* ----------------- CARDS SECTION ----------------- */
+.cards-container {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+}
+
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.left-buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.left-buttons button:hover {
+  background: #00abf0;
+  color: white;
+}
+
+
+.right-colors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-colors span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+
+.black { background: black; }
+.purple { background: #8e44ad; }
+.orange { background: #f39c12; }
+.green { background: #16a085; }
+
+/* ----------------- CARD ----------------- */
+.card-stack {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  
+}
+
+
+/* Individual cards */
+.card {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 90px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  border: 0.1px solid #8c838381;
+}
+
+/* Stack layering (like playing cards) */
+.card:nth-child(1) {
+  z-index: 3;
+  
+}
+.card:nth-child(2) {
+  z-index: 2;
+  transform: translateY(10px) scale(0.98);
+  opacity: 0.9;
+}
+.card:nth-child(3) {
+  z-index: 1;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0.7;
+}
+
+/* Card content */
+
+.card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom:10px;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.info p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #201e1e;
+  margin-bottom: 8px;
+
+}
+
+.info span {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+
+.action-btn {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+
+}
+
+.action-btn button {
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.call {
+  background: black;
+  color: white;
+  font-size: 12px;
+}
+
+.call:hover {
+  background: #333;
+}
+
+.message {
+  background: #b1a6a65b;
+}
+
+.message:hover {
+  background: #ddd;
+}
